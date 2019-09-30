@@ -1,0 +1,53 @@
+@charset "utf-8";
+@import 'variable.scss';
+/** reset **/
+select{color: #555;font-size:12px;}
+
+body, div, p, h1,h2, h3, h4, h5, h6, ul, ol, li, dl, dt, dd, table, th, td, form, fieldset, legend,
+input, textarea, blockquote, strong, em, address { margin:0;padding:0;-webkit-text-size-adjust:none; vertical-align: baseline;  font-family: 'Apple SD Gothic Neo', AppleGothic, '돋움', Dotum, Tahoma, Verdana, Geneva, Arial, Helvetica, sans-serif; font-size:4vw;color:#000; font-weight: 500;}
+
+h1, h2 ,h3, h4, h5, h6 {font-size: 100%; font-weight: normal; }
+ul, ol { list-style: none; }
+img {  border:0 none;vertical-align:top }
+img, fieldset { padding: 0; border: none; }
+legend, caption { width:0; height:0; font-size:0; line-height:0; overflow:hidden; visibility:hidden; display: none; }
+input { background: none; border: 0; }
+
+table {border-collapse: separate; border-spacing:0; border:0 none;  table-layout: fixed;}
+caption {position: absolute; overflow: hidden; width: 0; height: 0; font-size: 0; line-height: 0;}
+
+
+address, strong, em, cite {font-weight:normal; font-style:normal;}
+table th {font-weight:normal; vertical-align: middle;}
+table td {vertical-align: middle;}
+strong, em, address { font-style: normal; }
+hr { display:none; }
+q:before,q:after {content:"";}
+abbr,acronym { border:0; }
+#skipnav { width:0; height:0; line-height:0; overflow:hidden; visibility:hidden; font-size:0; }
+.blind, hr { overflow:hidden; visibility:hidden; position:absolute; width:0; height:0; font-size:0; line-height:0; }
+a { text-decoration: none; background: 0 none; color: #333;}
+textarea { background: none; border: 0; }
+input[type=submit], input[type=reset], button{cursor: pointer;}
+i{font-style:normal}
+
+button {background: #bfbfbd; border-radius: 3px; color: black; border: 0px 1px 1px 0px solid #333;-webkit-appearance: button; box-shadow: inset 0px 2px #dddddd; padding: 1.7vw 2.8vw; outline: none; }
+
+body {
+	background:#bfbfbd;
+}
+
+img { max-width: 100% }
+
+::-webkit-scrollbar {
+	-webkit-appearance: none;
+	width: 4vw;
+	border-left:1px solid #999;
+
+}
+::-webkit-scrollbar-thumb {
+	border-radius: 2px;
+	background-color: rgba(0,0,0,.4);
+}
+
+

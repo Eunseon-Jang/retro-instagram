@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, user-scalable=no">
+	<title>Hello World</title>
+	<link rel="stylesheet" type="text/css" href="../../dist/css/slick.css">
+	<link rel="stylesheet" type="text/css" href="../../dist/css/style.css">
+	<script
+	src="../js/jquery.js"></script>
+	<script src="../../dist/js/bundle.js"></script>
+
+	<script type="text/javascript" src="instafeed.min.js"></script> <!-- js 파일 로드 -->
+	<script type="text/javascript" src="../js/slick.min.js"></script>
+	<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+	<style type="text/css">
+    html, body {
+      margin: 0;
+      padding: 0;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    .slider {
+        width: 50%;
+        margin: 100px auto;
+    }
+
+    .slick-slide {
+      margin: 0px 20px;
+    }
+
+    .slick-slide img {
+      width: 100%;
+    }
+
+    .slick-prev:before,
+    .slick-next:before {
+      color: black;
+    }
+
+
+    .slick-slide {
+      transition: all ease-in-out .3s;
+      opacity: .2;
+    }
+    
+    .slick-active {
+      opacity: .5;
+    }
+
+    .slick-current {
+      opacity: 1;
+    }
+  </style>
+</head>
+<body>
+	<div id="wrap" class="container">
+		<div class="header">
+			<div class="win_status_bar">
+				<i class="icon_instagram"></i>
+				<span class="win_title">instagram.exe</span>
+				<ul class="win_btns">
+					<li><button>ㄹ</button></li>
+					<li><button>ㅁ</button></li>
+					<li><button class="btn_close" onclick="close_popup()">X</button></li>
+				</ul>
+			</div>
+			<ul class="tool_tip">
+				<li>File</li>
+				<li>Edit</li>
+				<li>View</li>
+				<li>Options</li>
+				<li>Help</li>
+			</ul>
+			<div class="tit_bar"></div>
+			<div class="set_bar">
+				<button class="btn_back">Back</button>
+				<strong class="head_tit">Video</strong>
+				<button class="btn_reload">Reload</button>
+			</div>
+		</div>
+		<div id="container" class="container" style="overflow-y:scroll">
+			<div class="temp_ui_wrap">
+				<h2 class="temp_tit"> win_bar</h2>
+				<div class="temp_ui">
+					<div class="win_status_bar">
+							<i class="icon_instagram"></i>
+							<span class="win_title">instagram.exe</span>
+							<ul class="win_btns">
+								<li><button>ㄹ</button></li>
+								<li><button>ㅁ</button></li>
+								<li><button class="btn_close" onclick="close_popup()">X</button></li>
+							</ul>
+						</div>
+				</div>
+			</div><!--//temp_ui_wrap-->
+
+			<div class="temp_ui_wrap">
+				<h2 class="temp_tit"> Tool_bar</h2>
+				<div class="temp_ui">
+					<ul class="tool_tip">
+						<li>File</li>
+						<li>Edit</li>
+						<li>View</li>
+						<li>Options</li>
+						<li>Help</li>
+					</ul>
+				</div>
+			</div><!--//temp_ui_wrap-->
+
+			<div class="temp_ui_wrap">
+				<h2 class="temp_tit">Piclist feed</h2>
+				<div class="temp_ui">
+						<div class="pic_sort_feed medias"><!--//is_sort_square 클래스로 sort-->
+							<div id="temp-insta_square" class="pics_lst "></div>
+						</div>
+				</div>
+			</div><!--//temp_ui_wrap-->
+
+			<section class="lazy slider" data-sizes="50vw">
+				<div>
+					<img data-lazy="http://placehold.it/350x300?text=1-350w" data-srcset="http://placehold.it/650x300?text=1-650w 650w, http://placehold.it/960x300?text=1-960w 960w" data-sizes="100vw">
+				</div>
+				<div>
+					<img data-lazy="http://placehold.it/350x300?text=2-350w" data-srcset="http://placehold.it/650x300?text=2-650w 650w, http://placehold.it/960x300?text=2-960w 960w" data-sizes="100vw">
+				</div>
+				<div>
+					<img data-lazy="http://placehold.it/350x300?text=3-350w"  data-srcset="http://placehold.it/650x300?text=3-650w 650w, http://placehold.it/960x300?text=3-960w 960w" data-sizes="100vw">
+				</div>
+				<div>
+					<img data-lazy="http://placehold.it/350x300?text=4-350w"  data-srcset="http://placehold.it/650x300?text=4-650w 650w, http://placehold.it/960x300?text=4-960w 960w" data-sizes="100vw">
+				</div>
+				<div>
+					<img data-lazy="http://placehold.it/350x300?text=5-350w"  data-srcset="http://placehold.it/650x300?text=5-650w 650w, http://placehold.it/960x300?text=5-960w 960w" data-sizes="100vw">
+				</div>
+				<div>
+					<!-- this slide should inherit the sizes attr from the parent slider -->
+					<img data-lazy="http://placehold.it/350x300?text=6-350w"  data-srcset="http://placehold.it/650x300?text=6-650w 650w, http://placehold.it/960x300?text=6-960w 960w">
+				</div>
+			</section>
+				
+		</div>
+	</div>
+
+	<div class="popup congratulation">
+		<div class="win_status_bar">
+			<span class="win_title">Congratulation!</span>
+			<div class="win_btns">
+				<button class="close_popup">x</button>
+			</div>
+		</div>
+		<div class="pop_content">
+			<p class="pop_msg">
+				You earn 17 likes<br>
+				4 new followers and 1 comment
+			</p>
+			<div class="pop_btns">
+				<button>OK</button>
+				<button>Cancle</button>
+			</div>
+		</div>
+	</div>
+
+	
+
+</body>
+
+
+</html>
