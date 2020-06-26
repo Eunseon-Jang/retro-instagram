@@ -81,11 +81,19 @@ $(document).ready(function() {
 					`;
 
 					$('#temp-insta_feed').append(template);
+					console.log(item.images);
 
 					item.images.map(
 						(image) => {
-							let url = image.type == "video" ? 
-							image.videos.standard_resolution.url : image.images.standard_resolution.url;
+							let url = '';
+							if(image.type == "video") {
+								if(image.videos.standard_resolution) {
+									url = image.videos.standard_resolution.url;
+
+								}
+							}else{
+							url = image.images.standard_resolution.url;
+							}
 
 							let ele = image.type == "video" ?
 							 `<video controls=""  name="media"><source src="${url}" type="video/mp4"></video>` :`<img src="${url}" width="${image.width}"/>`;
