@@ -1,5 +1,5 @@
 # retro-instagram
-
+- Mobile Web
 - This project made of pure Html, SCSS(CSS), vanila Javascript but it also has anohter version with React native.
 
 Window 98 version's simple Instagram UI with real time user data using Html, css, Javascript, SCSS, Instagram API.
