@@ -10314,8 +10314,18 @@ $(document).ready(function () {
         var template = '';
         template += "\n\t\t\t\t\t<div class=\"image-item insta-page\" id=\"post_idx_".concat(current_idx, "\">\n\t\t\t\t\t\t<div class=\"user_info_bar\">\n\t\t\t\t\t\t\t<span class=\"media_user_img\">\n\t\t\t\t\t\t\t\t<img src=\"").concat(item.user.profile_picture, "\"/>\n\t\t\t\t\t\t\t</span>\n\t\t\t\t\t\t\t<span class=\"media_user_name\">").concat(item.user.username, "</span>\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t<div class=\"modify_btns\">\n\t\t\t\t\t\t\t\t<button class=\"btn_options\">\u2261</button>\n\t\t\t\t\t\t\t\t<button class=\"edit\">edit</button>\n\t\t\t\t\t\t\t\t<button class=\"delete\">delete</button>\n\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t</div>\n\t\t\t\t\t\t<div class=\"images_wrap\">\n\t\t\t\t\t\t\t<div class=\"slider instagram_slider\">\n\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t</div>\n\t\t\t\t\t\t<div class=\"img-backdrop-tutorial\">\n\t\t\t\t\t\t\t<div class=\"media_btns\">\n\t\t\t\t\t\t\t\t<button class=\"btn_like\">Like</button>\n\t\t\t\t\t\t\t\t<button class=\"btn_comment\">Comment</button>\n\t\t\t\t\t\t\t\t<button class=\"btn_share\">Share</button>\n\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t<div class=\"insta-caption\">\n\t\t\t\t\t\t\t\t<p>Liked by <span class=\"likes\">").concat(item.likes, " others</span></p>\n\t\t\t\t\t\t\t\t<p>").concat(item.caption.text, "</p>\n\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t</div>\n\t\t\t\t\t\t<div class=\"captions\">\n\t\t\t\t\t\t\t<a></a>\n\t\t\t\t\t\t</div>\n\t\t\t\t\t</div>\n\t\t\t\t\t");
         $('#temp-insta_feed').append(template);
+        console.log(item.images);
         item.images.map(function (image) {
-          var url = image.type == "video" ? image.videos.standard_resolution.url : image.images.standard_resolution.url;
+          var url = '';
+
+          if (image.type == "video") {
+            if (image.videos.standard_resolution) {
+              url = image.videos.standard_resolution.url;
+            }
+          } else {
+            url = image.images.standard_resolution.url;
+          }
+
           var ele = image.type == "video" ? "<video controls=\"\"  name=\"media\"><source src=\"".concat(url, "\" type=\"video/mp4\"></video>") : "<img src=\"".concat(url, "\" width=\"").concat(image.width, "\"/>");
           var images = "";
           images += "\n\t\t\t\t\t\t\t\t<div>\n\t\t\t\t\t\t\t\t\t".concat(ele, "\n\t\t\t\t\t\t\t\t</div>");
