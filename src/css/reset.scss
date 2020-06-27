@@ -4,7 +4,7 @@
 select{color: #555;font-size:12px;}
 
 body, div, p, h1,h2, h3, h4, h5, h6, ul, ol, li, dl, dt, dd, table, th, td, form, fieldset, legend,
-input, textarea, blockquote, strong, em, address { margin:0;padding:0;-webkit-text-size-adjust:none; vertical-align: baseline;  font-family: 'Apple SD Gothic Neo', AppleGothic, '돋움', Dotum, Tahoma, Verdana, Geneva, Arial, Helvetica, sans-serif; font-size:4vw;color:#000; font-weight: 500;}
+input, textarea, blockquote, strong, em, address { margin:0;padding:0;-webkit-text-size-adjust:none; vertical-align: baseline;  font-family: 'Apple SD Gothic Neo', AppleGothic, '돋움', Dotum, Tahoma, Verdana, Geneva, Arial, Helvetica, sans-serif; font-size:16px;color:#000; font-weight: 500;}
 
 h1, h2 ,h3, h4, h5, h6 {font-size: 100%; font-weight: normal; }
 ul, ol { list-style: none; }
@@ -31,7 +31,7 @@ textarea { background: none; border: 0; }
 input[type=submit], input[type=reset], button{cursor: pointer;}
 i{font-style:normal}
 
-button {background: #bfbfbd; border-radius: 3px; color: black; border: 0px 1px 1px 0px solid #333;-webkit-appearance: button; box-shadow: inset 0px 2px #dddddd; padding: 1.7vw 2.8vw; outline: none; }
+button {background: #bfbfbd; border-radius: 3px; color: black; border: 0px 1px 1px 0px solid #333;-webkit-appearance: button; box-shadow: inset 0px 2px #dddddd; padding: 6px 10px; outline: none; }
 
 body {
 	background:#bfbfbd;

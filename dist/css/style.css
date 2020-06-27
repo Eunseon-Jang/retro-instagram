@@ -12,7 +12,7 @@ input, textarea, blockquote, strong, em, address {
   -webkit-text-size-adjust: none;
   vertical-align: baseline;
   font-family: 'Apple SD Gothic Neo', AppleGothic, '돋움', Dotum, Tahoma, Verdana, Geneva, Arial, Helvetica, sans-serif;
-  font-size: 4vw;
+  font-size: 16px;
   color: #000;
   font-weight: 500;
 }
@@ -142,7 +142,7 @@ button {
   border: 0px 1px 1px 0px solid #333;
   -webkit-appearance: button;
   box-shadow: inset 0px 2px #dddddd;
-  padding: 1.7vw 2.8vw;
+  padding: 6px 10px;
   outline: none;
 }
 
@@ -393,9 +393,10 @@ body, html {
 }
 
 .content_sort_lst li button {
+  min-height: 34px;
   padding-left: 0px;
   padding-right: 0px;
-  font-size: 3.2vw;
+  font-size: 12px;
   width: 100%;
 }
 
@@ -487,19 +488,22 @@ body, html {
 }
 
 .pic_sort_square .insta-image {
-  width: 31.4vw;
-  height: 31.4vw;
+  width: 33.33%;
+  height: 33.33%;
+  padding-top: 33.33%;
   position: relative;
   overflow: hidden;
   background: black;
   display: flex;
   align-items: center;
-  border: 0.3vw solid #ccc;
   background-size: contain;
 }
 
 .pic_sort_square .insta-image img,
 .pic_sort_square .insta-image video {
+  position: absolute;
+  left: 0px;
+  top: 0px;
   vertical-align: middle;
   width: 100%;
   height: 100%;
